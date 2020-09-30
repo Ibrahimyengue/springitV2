@@ -2,9 +2,9 @@ package com.ibrahimyengue.springit.domain;
 
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @NoArgsConstructor
@@ -18,4 +18,6 @@ public class Link {
     private String url;
 
     // comments
+    @OneToMany(mappedBy = "link")
+    private List<Comment> commetnts = new ArrayList<>();
 }

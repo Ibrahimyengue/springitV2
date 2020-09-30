@@ -5,6 +5,9 @@ import lombok.*;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @NoArgsConstructor
@@ -16,6 +19,9 @@ public class Comment {
     private Long id;
     private String body;
 
-    //private Link link;
+    //link;
+    @ManyToOne
+    private Link link;
+
 
 }
