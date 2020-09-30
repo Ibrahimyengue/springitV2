@@ -12,7 +12,7 @@ import java.util.List;
 @Entity
 @NoArgsConstructor
 @Data
-public class Comment {
+public class Comment extends Auditable{
 
     @Id
     @GeneratedValue
