@@ -9,7 +9,6 @@ import javax.persistence.Id;
 @Entity
 @NoArgsConstructor
 @Data
-@Builder
 public class Comment {
 
     @Id
