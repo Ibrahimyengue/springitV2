@@ -10,18 +10,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+@Getter
+@Setter
+@RequiredArgsConstructor
 @NoArgsConstructor
-@Data
+@AllArgsConstructor
+@Builder
 public class Comment extends Auditable{
 
     @Id
     @GeneratedValue
     private Long id;
+
+    @NonNull
     private String body;
 
     //link;
     @ManyToOne
+    @NonNull
     private Link link;
-
 
 }

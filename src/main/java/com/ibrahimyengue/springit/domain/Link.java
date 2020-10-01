@@ -7,17 +7,27 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+@Getter
+@Setter
+@RequiredArgsConstructor
 @NoArgsConstructor
-@Data
+@AllArgsConstructor
+@Builder
 public class Link extends Auditable{
 
     @Id
     @GeneratedValue
     private Long id;
+    @NonNull
     private String title;
+    @NonNull
     private String url;
 
     // comments
     @OneToMany(mappedBy = "link")
-    private List<Comment> commetnts = new ArrayList<>();
+    private List<Comment> comments = new ArrayList<>();
+
+    public void addComment(Comment comment){
+        comments.add(comment);
+    }
 }
