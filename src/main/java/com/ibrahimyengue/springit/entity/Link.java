@@ -1,6 +1,6 @@
-package com.ibrahimyengue.springit.domain;
+package com.ibrahimyengue.springit.entity;
 
-import com.ibrahimyengue.springit.service.BeanUtil;
+import com.ibrahimyengue.springit.service.util.BeanUtil;
 import lombok.*;
 import org.ocpsoft.prettytime.PrettyTime;
 

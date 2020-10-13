@@ -1,4 +1,4 @@
-package com.ibrahimyengue.springit.service;
+package com.ibrahimyengue.springit.service.util;
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;

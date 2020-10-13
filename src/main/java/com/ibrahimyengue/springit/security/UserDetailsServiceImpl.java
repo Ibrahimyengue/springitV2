@@ -1,6 +1,6 @@
 package com.ibrahimyengue.springit.security;
 
-import com.ibrahimyengue.springit.domain.User;
+import com.ibrahimyengue.springit.entity.User;
 import com.ibrahimyengue.springit.repository.UserRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

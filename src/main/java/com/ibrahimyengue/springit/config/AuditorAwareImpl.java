@@ -1,6 +1,6 @@
 package com.ibrahimyengue.springit.config;
 
-import com.ibrahimyengue.springit.domain.User;
+import com.ibrahimyengue.springit.entity.User;
 import org.springframework.data.domain.AuditorAware;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;

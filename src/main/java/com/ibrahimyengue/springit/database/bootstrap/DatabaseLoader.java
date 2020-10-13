@@ -1,8 +1,8 @@
-package com.ibrahimyengue.springit.bootstrap;
+package com.ibrahimyengue.springit.database.bootstrap;
 
-import com.ibrahimyengue.springit.domain.Link;
-import com.ibrahimyengue.springit.domain.Role;
-import com.ibrahimyengue.springit.domain.User;
+import com.ibrahimyengue.springit.entity.Link;
+import com.ibrahimyengue.springit.entity.Role;
+import com.ibrahimyengue.springit.entity.User;
 import com.ibrahimyengue.springit.repository.CommentRepository;
 import com.ibrahimyengue.springit.repository.LinkRepository;
 import com.ibrahimyengue.springit.repository.RoleRepository;
@@ -16,7 +16,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 
-@Component
+//@Component
 public class DatabaseLoader implements CommandLineRunner {
 
     private LinkRepository linkRepository;

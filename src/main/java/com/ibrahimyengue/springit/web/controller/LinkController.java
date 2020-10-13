@@ -1,6 +1,6 @@
-package com.ibrahimyengue.springit.controller;
-import com.ibrahimyengue.springit.domain.Link;
-import com.ibrahimyengue.springit.repository.LinkRepository;
+package com.ibrahimyengue.springit.web.controller;
+import com.ibrahimyengue.springit.entity.Link;
+import com.ibrahimyengue.springit.service.LinkService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -18,21 +18,21 @@ public class LinkController {
 
     private static final Logger logger = LoggerFactory.getLogger(LinkController.class);
 
-    private LinkRepository linkRepository;
+    private LinkService linkService;
 
-    public LinkController(LinkRepository linkRepository) {
-        this.linkRepository = linkRepository;
+    public LinkController(LinkService linkService) {
+        this.linkService = linkService;
     }
 
     @GetMapping("/")
     public String list(Model model){
-        model.addAttribute("links", linkRepository.findAll());
+        model.addAttribute("links", linkService.findAll());
         return "link/list";
     }
 
     @GetMapping("/link/{id}")
-    public String read(@PathVariable Long id, Model model){
-        Optional<Link> link = linkRepository.findById(id);
+    public String findById(@PathVariable Long id, Model model){
+        Optional<Link> link = linkService.findById(id);
 
         if(link.isPresent()){
             model.addAttribute("link",link.get());
@@ -58,7 +58,7 @@ public class LinkController {
             model.addAttribute("link", link);
             return "link/submit";
         }else{
-            linkRepository.save(link);
+            linkService.creatLink(link);
             logger.info("New link was saved successfully.");
             redirectAttributes
                     .addAttribute("id", link.getId())

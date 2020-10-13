@@ -1,4 +1,4 @@
-package com.ibrahimyengue.springit.domain;
+package com.ibrahimyengue.springit.entity;
 
 import lombok.*;
 

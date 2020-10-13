@@ -1,6 +1,6 @@
 package com.ibrahimyengue.springit.repository;
 
-import com.ibrahimyengue.springit.domain.User;
+import com.ibrahimyengue.springit.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
